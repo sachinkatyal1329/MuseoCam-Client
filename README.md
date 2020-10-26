@@ -1,0 +1,3 @@
+# MuseoCam-Client
+
+`yarn install`
