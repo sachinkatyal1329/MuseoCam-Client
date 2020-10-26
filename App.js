@@ -6,10 +6,6 @@ import Cam from './src/components/Camera/Camera'
 
 export default function App() {
   return (
-    <View style={styles.container}>
       <Cam />
-      <Text>Test</Text>
-      <StatusBar style="auto" />
-    </View>
   );
 }
