@@ -19,7 +19,7 @@ class Carousel extends Component<any, any> {
                         showsHorizontalScrollIndicator = {false}
                     >
                         {images.map(image => (
-                            <Image style = {styles.image} source = {image.source} />
+                            <Image key = {"123"} style = {styles.image} source = {image.source} />
                         ))}
                     </ScrollView>
                 </View>

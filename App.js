@@ -32,8 +32,11 @@ export default function App() {
   ];
 
   return (
-    <View >
-      <Carousel images={images} />
-    </View>
+    <>
+    <Cam />
+      <View >
+        <Carousel images={images} />
+      </View>
+    </>
   );
 }
