@@ -1,11 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Text, View, TouchableOpacity, Image } from 'react-native';
+import { Text, View, TouchableOpacity, Image, Dimensions } from 'react-native';
 import { Camera } from 'expo-camera';
 
 export default function Cam() {
   const [hasPermission, setHasPermission] = useState(null);
   const [cameraRef, setCameraRef] = useState(null)
   const [type, setType] = useState(Camera.Constants.Type.back);
+  const { height, width } = Dimensions.get("window")
 
   let uri = undefined
 
@@ -22,7 +23,12 @@ if (hasPermission === null) {
     return <Text>No access to camera</Text>;
   }
   return (
-    <View style={{ flex: 1 }}>
+    <View style={{ 
+      flex: 1, 
+      position: "absolute",
+      height: height,
+      width: width
+      }}>
 
       <Camera style={{ flex: 1 }} type={type} ref={ref => {
         setCameraRef(ref) ;

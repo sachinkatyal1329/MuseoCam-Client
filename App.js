@@ -4,7 +4,6 @@ import { Text, View } from 'react-native';
 import { styles } from './src/constants/styles/style'
 import Cam from './src/components/Camera/Camera'
 import Carousel from './src/components/carousel/Carousel'
-// import Car from './src/components/carousel/Carousel'
 
 export default function App() {
   const images = [

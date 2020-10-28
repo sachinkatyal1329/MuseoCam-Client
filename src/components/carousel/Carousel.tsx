@@ -12,6 +12,11 @@ class Carousel extends Component<any, any> {
 
             return(
                 <View
+                style = {{
+                    backgroundColor: "white",
+                    position: "relative",
+                    top: "100%"
+                }}
                 >
                     <ScrollView
                         horizontal
