@@ -14,19 +14,32 @@ class Carousel extends Component<any, any> {
                 <View
                 style = {{
                     position: "relative",
-                    top: "30%"
+                    top: "20%"
                 }}
                 >
-                    <ScrollView
-                        horizontal
-                        pagingEnabled
-                        showsHorizontalScrollIndicator = {false}
-                    >
-                        {images.map(image => (
-                            <View key = {"123"} style = {styles.image} >
-                                <Text>HI</Text>
-                                </View>
-                        ))}
+                    <ScrollView pagingEnabled>
+                        <ScrollView
+                            horizontal
+                            pagingEnabled
+                            showsHorizontalScrollIndicator = {false}
+                        >
+                            {images.map(image => (
+                                <View key = {"123"} style = {styles.image} >
+                                    <Text>HI</Text>
+                                    </View>
+                            ))}
+                        </ScrollView>
+                        <ScrollView
+                            horizontal
+                            pagingEnabled
+                            showsHorizontalScrollIndicator = {false}
+                        >
+                            {images.map(image => (
+                                <View key = {"123"} style = {styles.image2} >
+                                    <Text>HI</Text>
+                                    </View>
+                            ))}
+                        </ScrollView>
                     </ScrollView>
                 </View>
             )
@@ -53,7 +66,13 @@ const styles = StyleSheet.create({
       width: width * 0.9,
       margin: width * 0.05,
       height,
-      backgroundColor: "lightgray",
       borderRadius: 10
     },
+    image2: {
+        width: width * 0.9,
+        margin: width * 0.05,
+        height,
+        backgroundColor: "lightgray",
+        borderRadius: 10
+      },
   });
