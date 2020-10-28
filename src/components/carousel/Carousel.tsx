@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import { View, ScrollView, Image, StyleSheet, Dimensions } from 'react-native'
+import { View, ScrollView, Image, StyleSheet, Dimensions, Text } from 'react-native'
 
-const { width } = Dimensions.get("window")
-const height = width * 0.8
+let { width, height } = Dimensions.get("window")
+height = height * 0.75
 
 class Carousel extends Component<any, any> {
     
@@ -13,9 +13,8 @@ class Carousel extends Component<any, any> {
             return(
                 <View
                 style = {{
-                    backgroundColor: "white",
                     position: "relative",
-                    top: "100%"
+                    top: "30%"
                 }}
                 >
                     <ScrollView
@@ -24,7 +23,9 @@ class Carousel extends Component<any, any> {
                         showsHorizontalScrollIndicator = {false}
                     >
                         {images.map(image => (
-                            <Image key = {"123"} style = {styles.image} source = {image.source} />
+                            <View key = {"123"} style = {styles.image} >
+                                <Text>HI</Text>
+                                </View>
                         ))}
                     </ScrollView>
                 </View>
@@ -52,5 +53,7 @@ const styles = StyleSheet.create({
       width: width * 0.9,
       margin: width * 0.05,
       height,
+      backgroundColor: "lightgray",
+      borderRadius: 10
     },
   });
