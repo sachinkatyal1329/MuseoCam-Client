@@ -17,7 +17,10 @@ class Carousel extends Component<any, any> {
                     top: "20%"
                 }}
                 >
-                    <ScrollView pagingEnabled>
+                    <ScrollView 
+                        pagingEnabled
+                        showsVerticalScrollIndicator = {false}
+                        >
                         <ScrollView
                             horizontal
                             pagingEnabled
@@ -36,7 +39,6 @@ class Carousel extends Component<any, any> {
                         >
                             {images.map(image => (
                                 <View key = {"123"} style = {styles.image2} >
-                                    <Text>HI</Text>
                                     </View>
                             ))}
                         </ScrollView>
